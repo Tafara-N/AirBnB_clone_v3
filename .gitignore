@@ -1,0 +1,5 @@
+## Ignore certain files and directories
+
+file.json
+__pycache__/
+versions/

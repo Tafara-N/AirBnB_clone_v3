@@ -25,7 +25,7 @@ def close_db(error):
 
 
 @app.errorhandler(404)
-def error_404(error):
+def error_page(error):
     """
     404 Error
     ---
@@ -50,5 +50,5 @@ if __name__ == "__main__":
     if not host:
         host = '0.0.0.0'
     if not port:
-        port = '5000'
+        port = 5000
     app.run(host=host, port=port, threaded=True)

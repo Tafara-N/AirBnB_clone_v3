@@ -12,7 +12,11 @@ from os.path import isdir
 
 def do_pack():
     """
+<<<<<<< HEAD
     Generates a tgz archive
+=======
+    Generating a tgz archive
+>>>>>>> storage_get_count
     """
 
     try:

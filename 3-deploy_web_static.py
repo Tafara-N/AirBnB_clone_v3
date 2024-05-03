@@ -13,7 +13,11 @@ env.hosts = ['142.44.167.228', '144.217.246.195']
 
 def do_pack():
     """
+<<<<<<< HEAD
     Generates a tgz archive
+=======
+    Generating a tgz archive
+>>>>>>> storage_get_count
     """
 
     try:
@@ -29,7 +33,11 @@ def do_pack():
 
 def do_deploy(archive_path):
     """
+<<<<<<< HEAD
     Distributes an archive to the web servers
+=======
+    Distributing an archive to the web servers
+>>>>>>> storage_get_count
     """
 
     if exists(archive_path) is False:
@@ -53,7 +61,11 @@ def do_deploy(archive_path):
 
 def deploy():
     """
+<<<<<<< HEAD
     Creates and distributes an archive to the web servers
+=======
+    Creating and distributing an archive to the web servers
+>>>>>>> storage_get_count
     """
 
     archive_path = do_pack()

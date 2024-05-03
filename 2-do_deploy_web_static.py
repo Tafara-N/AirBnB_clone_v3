@@ -12,7 +12,11 @@ env.hosts = ['142.44.167.228', '144.217.246.195']
 
 def do_deploy(archive_path):
     """
+<<<<<<< HEAD
     Distributes an archive to the web servers
+=======
+    Distributing an archive to the web servers
+>>>>>>> storage_get_count
     """
 
     if exists(archive_path) is False:

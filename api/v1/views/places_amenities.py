@@ -15,7 +15,7 @@ from flasgger.utils import swag_from
 
 @app_views.route('places/<place_id>/amenities', methods=['GET'],
                  strict_slashes=False)
-@swag_from('documentation/place_amenity/get_places_amenities.yml',
+@swag_from('docs/place_amenity/fetch_place_amenities.yaml',
            methods=['GET'])
 def fetch_place_amenities(place_id):
     """
@@ -37,7 +37,7 @@ def fetch_place_amenities(place_id):
 
 @app_views.route('/places/<place_id>/amenities/<amenity_id>',
                  methods=['DELETE'], strict_slashes=False)
-@swag_from('documentation/place_amenity/delete_place_amenities.yml',
+@swag_from('docs/place_amenity/remove_place_amenity.yaml',
            methods=['DELETE'])
 def remove_place_amenity(place_id, amenity_id):
     """
@@ -68,7 +68,7 @@ def remove_place_amenity(place_id, amenity_id):
 
 @app_views.route('/places/<place_id>/amenities/<amenity_id>', methods=['POST'],
                  strict_slashes=False)
-@swag_from('documentation/place_amenity/post_place_amenities.yml',
+@swag_from('docs/place_amenity/link_place_amenity.yaml',
            methods=['POST'])
 def link_place_amenity(place_id, amenity_id):
     """

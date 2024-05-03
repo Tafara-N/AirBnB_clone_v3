@@ -17,7 +17,7 @@ from flasgger.utils import swag_from
 
 @app_views.route('/cities/<city_id>/places', methods=['GET'],
                  strict_slashes=False)
-@swag_from('documentation/place/get_places.yml', methods=['GET'])
+@swag_from('docs/place/fetch_places.yaml', methods=['GET'])
 def fetch_places(city_id):
     """
     Retrieves the list of all Place objects of a City
@@ -33,7 +33,7 @@ def fetch_places(city_id):
 
 
 @app_views.route('/places/<place_id>', methods=['GET'], strict_slashes=False)
-@swag_from('documentation/place/get_place.yml', methods=['GET'])
+@swag_from('docs/place/fetch_place.yaml', methods=['GET'])
 def fetch_place(place_id):
     """
     Retrieves a Place object
@@ -48,7 +48,7 @@ def fetch_place(place_id):
 
 @app_views.route('/places/<place_id>', methods=['DELETE'],
                  strict_slashes=False)
-@swag_from('documentation/place/delete_place.yml', methods=['DELETE'])
+@swag_from('docs/place/remove_place.yaml', methods=['DELETE'])
 def remove_place(place_id):
     """
     Removes/Deletes a Place Object
@@ -66,7 +66,7 @@ def remove_place(place_id):
 
 @app_views.route('/cities/<city_id>/places', methods=['POST'],
                  strict_slashes=False)
-@swag_from('documentation/place/post_place.yml', methods=['POST'])
+@swag_from('docs/place/create_place.yaml', methods=['POST'])
 def create_place(city_id):
     """
     Creates a Place
@@ -98,7 +98,7 @@ def create_place(city_id):
 
 
 @app_views.route('/places/<place_id>', methods=['PUT'], strict_slashes=False)
-@swag_from('documentation/place/put_place.yml', methods=['PUT'])
+@swag_from('docs/place/update_place.yaml', methods=['PUT'])
 def update_place(place_id):
     """
     Updates a Place
@@ -122,7 +122,7 @@ def update_place(place_id):
 
 
 @app_views.route('/places_search', methods=['POST'], strict_slashes=False)
-@swag_from('documentation/place/post_search.yml', methods=['POST'])
+@swag_from('documentation/place/search_place.yaml', methods=['POST'])
 def search_place():
     """
     Retrieves all Place objects depending of the JSON in the body

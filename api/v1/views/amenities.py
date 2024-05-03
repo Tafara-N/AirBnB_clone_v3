@@ -12,7 +12,7 @@ from flasgger.utils import swag_from
 
 
 @app_views.route('/amenities', methods=['GET'], strict_slashes=False)
-@swag_from('documentation/amenity/all_amenities.yml')
+@swag_from('docs/amenity/amenities.yaml')
 def fetch_amenities():
     """
     Retrieves a list of all amenities
@@ -27,7 +27,7 @@ def fetch_amenities():
 
 @app_views.route('/amenities/<amenity_id>/', methods=['GET'],
                  strict_slashes=False)
-@swag_from('documentation/amenity/get_amenity.yml', methods=['GET'])
+@swag_from('docs/amenity/fetch_amenity.yaml', methods=['GET'])
 def fetch_amenity(amenity_id):
     """
     Retrieves an amenity
@@ -42,7 +42,7 @@ def fetch_amenity(amenity_id):
 
 @app_views.route('/amenities/<amenity_id>', methods=['DELETE'],
                  strict_slashes=False)
-@swag_from('documentation/amenity/delete_amenity.yml', methods=['DELETE'])
+@swag_from('docs/amenity/remove_amenity.yaml', methods=['DELETE'])
 def remove_amenity(amenity_id):
     """
     Removes/Deletes an amenity  Object
@@ -59,7 +59,7 @@ def remove_amenity(amenity_id):
 
 
 @app_views.route('/amenities', methods=['POST'], strict_slashes=False)
-@swag_from('documentation/amenity/post_amenity.yml', methods=['POST'])
+@swag_from('docs/amenity/create_amenity.yaml', methods=['POST'])
 def create_amenity():
     """
     Creates an amenity
@@ -79,7 +79,7 @@ def create_amenity():
 
 @app_views.route('/amenities/<amenity_id>', methods=['PUT'],
                  strict_slashes=False)
-@swag_from('documentation/amenity/put_amenity.yml', methods=['PUT'])
+@swag_from('docs/amenity/update_amenity.yaml', methods=['PUT'])
 def update_amenity(amenity_id):
     """
     Updates an amenity

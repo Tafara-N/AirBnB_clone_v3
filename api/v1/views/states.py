@@ -12,7 +12,7 @@ from flasgger.utils import swag_from
 
 
 @app_views.route('/states', methods=['GET'], strict_slashes=False)
-@swag_from('documentation/state/get_state.yml', methods=['GET'])
+@swag_from('docs/state/fetch_states.yaml', methods=['GET'])
 def fetch_states():
     """
     Retrieves the list of all State objects
@@ -26,7 +26,7 @@ def fetch_states():
 
 
 @app_views.route('/states/<state_id>', methods=['GET'], strict_slashes=False)
-@swag_from('documentation/state/get_id_state.yml', methods=['get'])
+@swag_from('docs/state/fetch_state_id.yaml', methods=['get'])
 def fetch_state(state_id):
     """
     Retrieves a specific State
@@ -41,7 +41,7 @@ def fetch_state(state_id):
 
 @app_views.route('/states/<state_id>', methods=['DELETE'],
                  strict_slashes=False)
-@swag_from('documentation/state/delete_state.yml', methods=['DELETE'])
+@swag_from('docs/state/remove_state.yaml', methods=['DELETE'])
 def remove_state(state_id):
     """
     Removes/deletes a State Object
@@ -59,7 +59,7 @@ def remove_state(state_id):
 
 
 @app_views.route('/states', methods=['POST'], strict_slashes=False)
-@swag_from('documentation/state/post_state.yml', methods=['POST'])
+@swag_from('docs/state/create_state.yaml', methods=['POST'])
 def create_state():
     """
     Creating a State
@@ -77,7 +77,7 @@ def create_state():
 
 
 @app_views.route('/states/<state_id>', methods=['PUT'], strict_slashes=False)
-@swag_from('documentation/state/put_state.yml', methods=['PUT'])
+@swag_from('docs/state/update_state.yaml', methods=['PUT'])
 def update_state(state_id):
     """
     Updating a State
